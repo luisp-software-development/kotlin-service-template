@@ -1,0 +1,16 @@
+app:
+  cors:
+    allowed-origin: ${FRONTEND_URL:http://localhost:3000}
+
+spring:
+  application:
+    name: java-service-template
+
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/tasksdb}
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    password: ${SPRING_DATASOURCE_PASSWORD:postgres}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
